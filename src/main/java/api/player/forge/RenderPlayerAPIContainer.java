@@ -43,6 +43,7 @@ public class RenderPlayerAPIContainer extends DummyModContainer
 
 		meta.modId = "RenderPlayerAPI";
 		meta.name = "Render Player API";
+		meta.version = "1.1";
 		meta.version = RenderPlayerAPIPlugin.VERSION;
 		meta.description = "Render Player API for Minecraft Forge";
 		meta.url = "http://www.minecraftforum.net/topic/1261354-";
