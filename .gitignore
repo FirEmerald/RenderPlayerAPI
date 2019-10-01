@@ -25,3 +25,11 @@ classes/
 
 # Forge
 *.launch
+gradlew
+gradlew.bat
+LICENSE-Paulscode IBXM Library.txt
+LICENSE-Paulscode SoundSystem CodecIBXM.txt
+gradle/*
+gradle.properties
+forge-1.12.2-14.23.5.2838-changelog.txt
+CREDITS.txt
