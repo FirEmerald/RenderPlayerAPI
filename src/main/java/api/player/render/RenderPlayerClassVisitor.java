@@ -764,14 +764,15 @@ public final class RenderPlayerClassVisitor extends ClassVisitor
 
 		mv = cv.visitMethod(Opcodes.ACC_PUBLIC | Opcodes.ACC_FINAL, "realGetMainModel", "()" + (isObfuscated ? "Lbqj;" : "Lnet/minecraft/client/model/ModelPlayer;") + "", null, null);
 		mv.visitVarInsn(Opcodes.ALOAD, 0);
-		mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, isObfuscated ? "cct" : "net/minecraft/client/renderer/entity/RenderPlayer", "getMainModel", "" + (isObfuscated ? "()Lbqj;" : "()Lnet/minecraft/client/model/ModelPlayer;") + "", false);
+		mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, isObfuscated ? "cct" : "net/minecraft/client/renderer/entity/RenderPlayer", isObfuscated ? "h" : "getMainModel", "" + (isObfuscated ? "()Lbqj;" : "()Lnet/minecraft/client/model/ModelPlayer;") + "", false);
 		mv.visitInsn(Opcodes.ARETURN);
 		mv.visitMaxs(0, 0);
 		mv.visitEnd();
 
 		mv = cv.visitMethod(Opcodes.ACC_PUBLIC | Opcodes.ACC_FINAL, "superGetMainModel", "()" + (isObfuscated ? "Lbqj;" : "Lnet/minecraft/client/model/ModelPlayer;") + "", null, null);
 		mv.visitVarInsn(Opcodes.ALOAD, 0);
-		mv.visitMethodInsn(Opcodes.INVOKESPECIAL, isObfuscated ? "caa" : "net/minecraft/client/renderer/entity/RenderLivingBase", "getMainModel", "" + (isObfuscated ? "()Lbqj;" : "()Lnet/minecraft/client/model/ModelPlayer;") + "", false);
+		mv.visitMethodInsn(Opcodes.INVOKESPECIAL, isObfuscated ? "caa" : "net/minecraft/client/renderer/entity/RenderLivingBase", isObfuscated ? "b" : "getMainModel", "" + (isObfuscated ? "()Lbqf;" : "()Lnet/minecraft/client/model/ModelBase;") + "", false);
+		mv.visitTypeInsn(Opcodes.CHECKCAST, isObfuscated ? "bqj" : "net/minecraft/client/model/ModelPlayer");
 		mv.visitInsn(Opcodes.ARETURN);
 		mv.visitMaxs(0, 0);
 		mv.visitEnd();
@@ -780,7 +781,8 @@ public final class RenderPlayerClassVisitor extends ClassVisitor
 		{
 			mv = cv.visitMethod(Opcodes.ACC_PUBLIC | Opcodes.ACC_FINAL, "localGetMainModel", "()" + (isObfuscated ? "Lbqj;" : "Lnet/minecraft/client/model/ModelPlayer;") + "", null, null);
 			mv.visitVarInsn(Opcodes.ALOAD, 0);
-			mv.visitMethodInsn(Opcodes.INVOKESPECIAL, isObfuscated ? "caa" : "net/minecraft/client/renderer/entity/RenderLivingBase", "getMainModel", "" + (isObfuscated ? "()Lbqj;" : "()Lnet/minecraft/client/model/ModelPlayer;") + "", false);
+			mv.visitMethodInsn(Opcodes.INVOKESPECIAL, isObfuscated ? "caa" : "net/minecraft/client/renderer/entity/RenderLivingBase", isObfuscated ? "b" : "getMainModel", "" + (isObfuscated ? "()Lbqf;" : "()Lnet/minecraft/client/model/ModelBase;") + "", false);
+			mv.visitTypeInsn(Opcodes.CHECKCAST, isObfuscated ? "bqj" : "net/minecraft/client/model/ModelPlayer");
 			mv.visitInsn(Opcodes.ARETURN);
 			mv.visitMaxs(0, 0);
 			mv.visitEnd();
